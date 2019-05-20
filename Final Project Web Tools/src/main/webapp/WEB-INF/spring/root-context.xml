@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+	
+	<!-- Events Objects -->
+    <bean id="eventValidator" class="com.webtools.validators.EventValidator" />
+    <bean id="eventUpdateValidator" class="com.webtools.validators.EventUpdateValidator" />
+    <bean id="eventDao" class="com.webtools.Dao.EventDAO" />	
+    <bean id="event" class="com.webtools.pojo.Event"/>	
+    
+    <!-- User Objects -->
+    <bean id="userValidator" class="com.webtools.validators.UserValidator" />
+    <bean id="loginValidator" class="com.webtools.validators.LoginValidator" />
+    <bean id="userDao" class="com.webtools.Dao.UserDAO" />	
+    <bean id="user" class="com.webtools.pojo.User"/>	
+    
+    <!-- Booking Objects -->
+    <bean id="addressValidator" class="com.webtools.validators.AddressValidator" />
+    <bean id="bookingDao" class="com.webtools.Dao.BookingDAO" />	
+    <bean id="booking" class="com.webtools.pojo.Booking"/>	
+	<bean id="address" class="com.webtools.pojo.Address"/>	
+	
+</beans>
